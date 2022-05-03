@@ -1,10 +1,10 @@
 name: "KinD (Kubernetes in Docker) Action"
 description: "Easily run a Kubernetes cluster in your GitHub Action"
-author: "Engineerd"
+author: "pacphi"
 inputs:
   version:
-    description: "Version of Kind to use (default v0.11.1)"
-    default: "v0.11.1"
+    description: "Version of Kind to use (default v0.12.0)"
+    default: "v0.12.0"
     required: true
   config:
     description: "Path (relative to the root of the repository) to a kind config file"
@@ -15,8 +15,8 @@ inputs:
     default: "kind"
     required: true
   wait:
-    description: "Wait for control plane node to be ready (default 300s)"
-    default: "300s"
+    description: "Wait for control plane node to be ready (default 60s)"
+    default: "60s"
   kubeconfig:
     description: "Sets kubeconfig path instead of $KUBECONFIG or $HOME/.kube/config"
   skipClusterCreation:
