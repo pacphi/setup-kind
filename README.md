@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: pacphi/setup-kind@v0.6.0
+      - uses: pacphi/setup-kind@v0.6.0-pre
       - name: Testing
         run: |
           kubectl cluster-info
@@ -42,12 +42,12 @@ cluster (the Kind tools is configured in the path).
 
 Optional inputs:
 
-- `version`: version of Kind to use (default `"v0.11.1"`)
+- `version`: version of Kind to use (default `"v0.12.0"`)
 - `config`: path (relative to the root of the repository) to a kind config file.
   If omitted, a default 1-node cluster will be created
 - `image`: node Docker image to use for booting the cluster.
 - `name`: cluster name (default `"kind"`)
-- `wait`: wait for control plane node to be ready (default `"300s"`)
+- `wait`: wait for control plane node to be ready (default `"60s"`)
 - `kubeconfig`: sets kubeconfig path instead of $KUBECONFIG or $HOME/.kube/config
 - `skipClusterCreation`: if `"true"`, the action will not create a cluster, just
   acquire the tools
@@ -67,7 +67,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: pacphi/setup-kind@v0.6.0
+      - uses: pacphi/setup-kind@v0.6.0-pre
         with:
           version: "v0.12.0"
       - name: Testing
