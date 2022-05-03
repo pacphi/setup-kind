@@ -31,7 +31,7 @@
   "author": "Engineerd",
   "license": "MIT",
   "dependencies": {
-    "@actions/artifact": "^0.6.1",
+    "@actions/artifact": "^1.0.0",
     "@actions/cache": "^1.0.8",
     "@actions/core": "^1.6.0",
     "@actions/exec": "^1.1.0",
