@@ -1,4 +1,4 @@
-# @engineerd/setup-kind
+# @pacphi/setup-kind
 
 Setup [KinD (Kubernetes in Docker)](https://kind.sigs.k8s.io/) with a single
 GitHub Action!
@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: engineerd/setup-kind@v0.5.0
+      - uses: pacphi/setup-kind@v0.6.0
       - name: Testing
         run: |
           kubectl cluster-info
@@ -67,9 +67,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: engineerd/setup-kind@v0.5.0
+      - uses: pacphi/setup-kind@v0.6.0
         with:
-          version: "v0.11.1"
+          version: "v0.12.0"
       - name: Testing
         run: |
           kubectl cluster-info
